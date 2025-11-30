@@ -113,9 +113,9 @@ Location: `aiken-contracts/validators/review_validator.ak`
 - [ ] Mainnet Deployment
 - [ ] Reputation Token System
 
-## � Team
+## 👥 Team
 
-Built for the Cardano Hackathon by **[Your Name]**.
+Built for the Cardano Hackathon by **Binary Verse**
 
 ---
 
