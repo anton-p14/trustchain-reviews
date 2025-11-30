@@ -1,306 +1,122 @@
-# TrustChain Reviews - Cardano Blockchain Review Platform
+# TrustChain Reviews 🛡️
 
-A decentralized review platform built on Cardano blockchain using Aiken smart contracts, providing tamper-proof, verified reviews with DID authentication and ZK proof privacy.
+**Blockchain-Verified Product Review Platform on Cardano**
 
-## 🎯 Project Overview
+TrustChain Reviews is a decentralized application (dApp) that solves the crisis of trust in online reviews. By leveraging the Cardano blockchain, IPFS, and smart contracts, we ensure that every review is immutable, verifiable, and trustworthy.
 
-TrustChain Reviews is a blockchain-powered review and rating platform that ensures:
-- **Immutable Reviews**: All reviews stored on-chain, tamper-proof
-- **Verified Identities**: DID-based authentication prevents fake accounts
-- **Privacy-Preserving**: Midnight ZK proofs for duplicate prevention
-- **Reward System**: Honest reviewers earn tokens for verified reviews
-- **Transparent**: Public blockchain verification via CardanoScan
+![TrustChain Demo](frontend/public/vite.svg)
 
-## 🏗️ Architecture
+## 🚀 Key Features
 
-### Smart Contracts (Aiken)
-- **Review Validator**: Handles review submission, upvoting, flagging, and rewards
-- **Anti-Spam Logic**: Prevents duplicate reviews from same wallet
-- **Community Verification**: Upvote/flag mechanism for review quality
+- **Blockchain Verification**: Every review is recorded on the Cardano blockchain as a permanent, tamper-proof record.
+- **Smart Contract Validation**: Reviews are validated by an Aiken smart contract (Plutus V3) to ensure integrity.
+- **Decentralized Storage**: Review content is stored on IPFS, ensuring censorship resistance.
+- **Wallet Integration**: Seamless connection with Eternl wallet (CIP-30 compliant).
+- **Proof of Purchase**: Architecture ready for Zero-Knowledge Proofs (Midnight integration) to verify purchases without revealing identity.
+- **Premium UI/UX**: Modern glassmorphism design built with React and Tailwind CSS.
 
-### Backend (Node.js + Express)
-- **Cardano Integration**: Mesh SDK for transaction building
-- **IPFS Storage**: Optional storage for images and large review data
-- **DID Verification**: Simplified implementation with Atala PRISM hooks
-- **Midnight Integration**: ZK proof placeholders for privacy
+## 🛠️ Tech Stack
 
-### Frontend Integration
-- **Eternl Wallet**: Seamless wallet connection and signing
-- **API Client**: Easy-to-use client for all backend endpoints
+### Frontend
+- **React 18** + **Vite**: Fast, modern web framework
+- **Tailwind CSS**: Utility-first styling
+- **Framer Motion**: Smooth animations
+- **CIP-30**: Wallet connection standard
 
-## 📁 Project Structure
+### Backend
+- **Node.js** + **Express**: REST API
+- **Mesh SDK**: Cardano transaction building
+- **Blockfrost**: Blockchain API provider
+- **CSL (Cardano Serialization Library)**: Transaction assembly
+- **IPFS (Kubo)**: Decentralized content storage
 
-```
-cardano_review/
-├── aiken-contracts/          # Aiken smart contracts
-│   ├── validators/
-│   │   └── review_validator.ak
-│   ├── aiken.toml
-│   └── plutus.json           # Compiled contract
-├── backend/                  # Node.js API server
-│   ├── services/
-│   │   ├── cardano.js       # Blockchain integration
-│   │   ├── wallet.js        # Wallet service
-│   │   ├── ipfs.js          # IPFS integration
-│   │   ├── did.js           # DID verification
-│   │   └── midnight.js      # ZK proof integration
-│   ├── utils/
-│   │   └── hash.js          # Hashing utilities
-│   ├── server.js            # Express server
-│   ├── package.json
-│   └── .env.example
-└── frontend/                 # Frontend integration
-    ├── wallet-connector.js   # Eternl wallet connector
-    └── api-client.js         # API client
-```
+### Blockchain
+- **Cardano Preprod Testnet**: Network
+- **Aiken**: Smart contract language
+- **Plutus V3**: Smart contract platform
 
-## 🚀 Getting Started
+## 🏆 Proof of Work
+
+We have successfully submitted real transactions to the Cardano Preprod Testnet:
+
+- **Transaction 1**: `019ccf07e880e2bef19709aced71dd8dc8a293136ca1b7c54849e77f4461a99f`
+- **Transaction 2**: `b3541ea9d6fc72bd9395688b6c2e3a144677e823a5ab32a95175a2a274cb8f52`
+
+View them on [CardanoScan](https://preprod.cardanoscan.io).
+
+## � Installation & Setup
 
 ### Prerequisites
+- Node.js (v18+)
+- IPFS Desktop or CLI
+- Eternl Wallet (Browser Extension) set to Preprod Testnet
 
-- Node.js 18+ and npm
-- Aiken compiler (installed)
-- Eternl wallet browser extension
-- Blockfrost API key (free at https://blockfrost.io)
-
-### 1. Build Smart Contracts
-
+### 1. Clone the Repository
 ```bash
-cd aiken-contracts
-aiken check
-aiken build
+git clone https://github.com/YOUR_USERNAME/trustchain-reviews.git
+cd trustchain-reviews
 ```
 
-This generates `plutus.json` with the compiled validator.
-
-### 2. Configure Backend
-
+### 2. Setup Backend
 ```bash
 cd backend
 npm install
-
-# Copy environment template
-cp .env.example .env
-
-# Edit .env and add your Blockfrost API key
-nano .env
 ```
-
-Required environment variables:
+Create a `.env` file in `backend/` with your Blockfrost key:
 ```env
-NETWORK=preprod
-BLOCKFROST_API_KEY=your_key_here
-PORT=3000
+BLOCKFROST_PROJECT_ID=your_preprod_project_id
 ```
-
-### 3. Start Backend Server
-
+Start the server:
 ```bash
 npm start
-# or for development with auto-reload
+```
+
+### 3. Setup Frontend
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-Server will start on http://localhost:3000
-
-### 4. Frontend Integration
-
-Include the frontend files in your e-commerce site:
-
-```html
-<script type="module" src="wallet-connector.js"></script>
-<script type="module" src="api-client.js"></script>
-```
-
-## 📚 API Documentation
-
-### Endpoints
-
-#### Health Check
-```
-GET /health
-```
-
-#### Submit Review
-```
-POST /api/reviews/submit
-Body: {
-  walletAddress: string,
-  productSku: string,
-  rating: number (1-5),
-  reviewText: string,
-  reviewerPubKeyHash: string,
-  images?: string[]
-}
-```
-
-#### Get Product Reviews
-```
-GET /api/reviews/product/:productId
-```
-
-#### Upvote Review
-```
-POST /api/reviews/upvote
-Body: {
-  walletAddress: string,
-  reviewTxHash: string,
-  reviewOutputIndex: number,
-  voterPubKeyHash: string
-}
-```
-
-#### Verify Review
-```
-GET /api/reviews/verify/:txHash
-```
-
-#### Get Reputation
-```
-GET /api/reputation/:walletAddress
-```
-
-#### Submit Transaction
-```
-POST /api/transaction/submit
-Body: {
-  signedTxCbor: string
-}
-```
-
-## 💻 Frontend Usage Example
-
-### Connect Wallet
-
-```javascript
-import walletConnector from './wallet-connector.js';
-import apiClient from './api-client.js';
-
-// Connect to Eternl wallet
-const result = await walletConnector.connect();
-if (result.success) {
-  console.log('Connected:', result.address);
-  
-  // Verify with backend
-  await apiClient.connectWallet(result.address);
-}
-```
-
-### Submit Review
-
-```javascript
-// 1. Prepare review data
-const reviewData = {
-  walletAddress: walletConnector.getAddress(),
-  productSku: 'PRODUCT-123',
-  rating: 5,
-  reviewText: 'Excellent product!',
-  reviewerPubKeyHash: await walletConnector.getPubKeyHash()
-};
-
-// 2. Build transaction via API
-const response = await apiClient.submitReview(reviewData);
-const { unsignedTx } = response.data;
-
-// 3. Sign transaction with wallet
-const signedTx = await walletConnector.signTransaction(unsignedTx);
-
-// 4. Submit to blockchain
-const result = await apiClient.submitTransaction(signedTx);
-console.log('Review submitted! TX:', result.txHash);
-console.log('View on explorer:', result.explorerUrl);
-```
-
-### Fetch Reviews
-
-```javascript
-const productId = 'generated_product_id_hash';
-const reviews = await apiClient.getProductReviews(productId);
-
-reviews.reviews.forEach(review => {
-  console.log(`Rating: ${review.rating}/5`);
-  console.log(`Upvotes: ${review.upvotes}`);
-  console.log(`Verified: ${review.verified}`);
-});
-```
-
-## 🔧 Development
-
-### Install Dependencies
-
+### 4. Run IPFS
+Ensure your IPFS daemon is running:
 ```bash
-# Backend
-cd backend
-npm install
-
-# Aiken (if not installed)
-# Visit: https://aiken-lang.org/installation-instructions
+ipfs daemon
 ```
 
-### Run Tests
+## 📝 How to Use
 
-```bash
-# Test Aiken contracts
-cd aiken-contracts
-aiken check
+1. **Connect Wallet**: Click the "Connect Wallet" button in the top right.
+2. **Browse Products**: Select a product from the homepage.
+3. **Buy Product**: Click "Buy Now" to create a mock purchase record (required to review).
+4. **Write Review**: Go to the product page, rate it, and write your review.
+5. **Submit**: Click "Submit Review".
+6. **Sign Transaction**: Approve the transaction in your Eternl wallet popup.
+7. **Verify**: Wait for the success message and view your transaction on the blockchain!
 
-# Test backend (TODO)
-cd backend
-npm test
-```
+## 📄 Smart Contract
 
-## 🌐 Network Configuration
+The review validator is written in Aiken and ensures:
+- Rating is between 1 and 5
+- Transaction is signed by the reviewer
+- Review content exists (hash check)
+- Initial state is correct
 
-### Preprod Testnet (Default)
-- Network: `preprod`
-- Explorer: https://preprod.cardanoscan.io
-- Faucet: https://docs.cardano.org/cardano-testnet/tools/faucet
+Location: `aiken-contracts/validators/review_validator.ak`
 
-### Mainnet
-- Change `NETWORK=mainnet` in `.env`
-- Use mainnet Blockfrost API key
-- Explorer: https://cardanoscan.io
+## 🔮 Roadmap
 
-## 🔐 Security Features
+- [x] Core Blockchain Integration
+- [x] IPFS Storage
+- [x] Smart Contract (Aiken)
+- [ ] Midnight ZK Proof Integration (Privacy-preserving verification)
+- [ ] Mainnet Deployment
+- [ ] Reputation Token System
 
-- **On-Chain Validation**: All reviews validated by smart contract
-- **Signature Verification**: Transactions must be signed by reviewer
-- **Anti-Spam**: Prevents duplicate reviews from same wallet
-- **DID Authentication**: Decentralized identity verification
-- **ZK Proofs**: Privacy-preserving duplicate detection (Midnight)
+## � Team
 
-## 🎁 Reward System
-
-Reviewers earn rewards when:
-- Review receives ≥5 upvotes
-- Review has ≤2 flags
-- Review is marked as verified
-- Reviewer claims reward via smart contract
-
-Reward: 10 ADA (configurable in smart contract)
-
-## 📝 License
-
-MIT License - see LICENSE file for details
-
-## 🤝 Contributing
-
-This is a hackathon project for Cardano IBW Edition 2025. Contributions welcome!
-
-## 📞 Support
-
-For issues or questions:
-- Open an issue on GitHub
-- Contact: BinaryVerse team
-
-## 🙏 Acknowledgments
-
-- Cardano Foundation
-- IOG (Input Output Global)
-- Aiken Language Team
-- Mesh SDK Team
-- Eternl Wallet Team
+Built for the Cardano Hackathon by **[Your Name]**.
 
 ---
 
-**Built with ❤️ for Cardano Hackathon IBW Edition 2025**
+*TrustChain Reviews - Restoring Trust in E-Commerce*
