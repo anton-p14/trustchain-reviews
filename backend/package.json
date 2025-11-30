@@ -1,0 +1,31 @@
+{
+  "name": "trustchain-reviews-backend",
+  "version": "1.0.0",
+  "description": "Backend API for TrustChain Reviews - Cardano blockchain review platform",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cardano",
+    "blockchain",
+    "reviews",
+    "aiken",
+    "web3"
+  ],
+  "author": "BinaryVerse",
+  "license": "MIT",
+  "dependencies": {
+    "@meshsdk/core": "^1.7.0",
+    "@meshsdk/core-csl": "^1.7.0",
+    "@sidan-lab/sidan-csl-rs-nodejs": "^0.9.21",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "kubo-rpc-client": "^4.1.1"
+  }
+}

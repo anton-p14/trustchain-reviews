@@ -1,0 +1,370 @@
+
+=== PAGE 1 ===
+Advance your ideas at
+India blo week
+
+Team Name: Binary Verse
+
+Team Leader Name: Anton P
+
+Problem Statement: Track 1- General
+
+
+
+=== PAGE 2 ===
+Cardano
+
+FIACKATHION Ed novation H. RENE
+
+IBW Edition 2025
+
+Decentralized Review System - “TrustChain Reviews”
+
+e TrustChain Reviews is a decentralized review ecosystem built on the
+Cardano blockchain, ensuring transparency, authenticity, and fairness in
+online feedback.
+
+Every review is stored immutably on-chain, linked to a verified wallet
+identity (DID) — preventing fake, paid, or deleted reviews.
+
+Smart contracts manage review submission, verification, and rating
+aggregation, ensuring trustless and tamper-proofdata.
+
+A token-based reward system encourages genuine reviews and community-
+based verification.
+
+Businesses can build transparent brand reputations, and users retain
+ownership of their opinions.
+
+The project aims to strengthen consumer trust and promote real-world
+Cardano adoption in e-commerce and service industries.
+
+t—-—-
+
+
+=== PAGE 3 ===
+Cardano
+
+FACKATEHON aes
+
+ian
+
+IBW Edition 2025
+
+Opportunity & Uniqueness of the Solution — “TrustChain Reviews”
+
+66 How It’s Different
+
+e Reviews are stored permanently on
+the Cardano blockchain, so they
+can’t be edited or deleted.
+
+e Verified wallet identity (DID)
+ensures only real users can post
+reviews.
+
+¢ Community verification replaces
+
+corporate moderation for true
+
+transparency.
+
+66
+
+How It Solves the Problem
+
+¢ Eliminates fake and biased reviews
+using blockchain-based authenticity.
+
+¢ Builds trust by keeping every review
+publicly verifiable. 66
+
+e Smart contracts reward honest
+
+reviewers and penalize spam
+
+automatically.
+
+99
+
+Unique Selling Proposition
+
+e Fully decentralized and user-
+owned review system.
+99 ¢ Transparent, tamper-proof
+feedback for businesses and
+consumers.
+
+O ‘e@) e Promotes real-world Cardano
+adoption through everyday web
+use.
+Cry. ”
+
+
+
+=== PAGE 4 ===
+Cardano
+
+FACKATEION
+
+IBW Edition 2025
+
+Innovation iae/e@
+
+partner
+
+List of Features Offered by the Solution — “TrustChain Reviews”
+
+ye Core Functional Features
+
+User Wallet Login: Secure onboarding using
+Cardano wallets.
+
+Submit Reviews On-Chain: Each review and
+rating stored immutably on the Cardano
+blockchain.
+
+Verified User Identity: Uses DID to prevent fake
+accounts.
+
+View & Filter Reviews: Users can view genuine,
+blockchain-verified reviews by product, service.
+
+Community Verification: Other users can upvote
+
+or flag reviews to maintain trust and accuracy.
+
+s Reward & Reputation System
+
+Smart Contract-Based Rewards: Honest
+reviewers earn tokens automatically after
+community validation.
+
+Reputation Points: Reviewers build on-chain
+credibility based on accuracy and engagement.
+Anti-Spam Logic: Smart contracts block duplicate
+or manipulated reviews.
+
+* Technical & Integration Features
+
+IPFS Integration: For optional storage of images or
+large review data.
+
+Public Transparency Dashboard: Shows verified
+reviews and trust metrics in real-time.
+
+API Support: Businesses can integrate blockchain-
+verified reviews directly into their websites.
+
+
+=== PAGE 5 ===
+Innovation iaded
+
+partner
+
+Process flow diagram — “TrustChain Reviews”
+
+TrustChain App (Frontend App)
+Web or mobile app built on
+
+Cardano DID (Atala)
+Execute Smart Contract Verifies user’s decentralized
+Cardano
+
+User Allows login via Cardano wallet identity
+(Reviewer, Customer, etc) (DID) Store & Retrieve Data
+
+R Submit / Verify Review
+
+Store & Retrieve Data
+Execute Smart Contract
+
+Smart Contract Layer (Plutus / Aiken) Cardano Blockchain
+Handles review submission and validation Records review hash,
+Stores hashes of reviews on-chain rating, wallet address and
+timestamp
+
+External Ecosystem
+Businesses can integrate verified
+
+Fetch Verified System
+reviews via APIs
+
+Fetch Verified Reviews External Ecosystem
+
+Businesses can integrate verified reviews via APIs
+
+
+=== PAGE 6 ===
+Wireframes — “TrustChain Reviews”
+
+TrustChain Verified
+Reviews (Cardano-
+Powered)
+
+Trucl & ¥*& ek Rateng
+4.6 (verified reviews
+
+Kk kkk addr1.8s
+
+Product quality is excellenti"
+
+KKKKK addr1.3s
+
+Received genuine item.
+
+KK kkk addr1.5d
+
+Delivery was late”
+
+View On-Chain Proof
+
+Connect Cardano Wallet
+
+Lace Eterni Flint
+
+Connect Cardano Wallet
+Product
+
+IPhone 15
+
+KKKKK
+
+cr
+{
+
+| Submit On-Chain Review
+
+Blockchain-verified review
+widget embedded directly on
+third-party platforms
+
+Users submit reviews using their
+Cardano wallet — ensuring DID-
+based identity and authenticity
+
+S
+
+TrustChain Review
+Explorer
+
+Product
+
+IPhone 15
+
+Review Verified
+on Cardano
+
+Reviewer Wailet addriq~fjh
+Rating Kk&KKK
+
+Review Hash OxA43F..9882
+Timestamp 14 Nov 2025, 10:30 PM
+
+View Transaction on
+CardanoScan
+
+A public blockchain explorer shows
+
+full transparency of every review
+
+Innovation : i ‘ a@ ;
+
+partner
+
+Ty are )
+
+
+
+=== PAGE 7 ===
+Architecture Diagram — “TrustChain Reviews”
+O
+
+CY
+User
+(Reviewer, Customer, etc)
+| Cardano DID
+pale: TrustChain (Atala PRISM)
+
+Verify Review
+
+Review Widget/
+
+API Layer
+Execute
+Smart Contract
+
+Smart Contract Layer
+(Plutus / Aiken)
+
+Cardano
+Store Review | Blockchain
+
+Smart Retrieve Data
+
+Fetch Verified
+Reviews
+
+External Ecosystem (3rd Party
+Apps /APIs)
+
+Innovation
+
+partner
+
+
+=== PAGE 8 ===
+Cardano
+
+FACKATEION
+
+IBW Edition 2025
+
+Innovation
+partner
+
+Technologies & Blockchain Integration — “TrustChain Reviews”
+
+ye 1. Technologies Used in the Solution
+Frontend
+
+¢ HTML, CSS, JavaScript
+e Embedded Review Widget (React.js)
+¢ Cardano Wallet Connector (Lace, Eternl, Flint)
+
+Backend
+
+e Node.js
+e API Gateway for integrating with third-party apps
+e Review submission & verification service
+
+Blockchain
+
+e Cardano
+e IPFS
+
+-? 2. Midnight Integration
+
+e Uses Compact language to generate ZK proofs
+
+¢ Verifies user uniqueness without revealing identity
+
+e Prevents duplicate reviews while keeping reviewer priva
+e Proof is passed to Cardano contract for validation
+
+3. Cardano Usage
+
+Stores review hash, rating, timestamp, wallet DID
+Smart contract validates reviews and rewards
+Enables transparent, tamper-proof review records
+Public verification via CardanoScan
+
+
+=== PAGE 9 ===
+Cardano
+
+| i he ) of
+FACKATEFION ey a ‘Biz
+
+IBW Ed ition 2025
+

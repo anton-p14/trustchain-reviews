@@ -1,0 +1,174 @@
+{
+  "preamble": {
+    "title": "binaryverse/trustchain-reviews",
+    "description": "TrustChain Reviews - Blockchain-verified review platform on Cardano",
+    "version": "0.1.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.19+e525483"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "review_validator.review_validator.spend",
+      "datum": {
+        "title": "datum_opt",
+        "schema": {
+          "$ref": "#/definitions/review_validator~1ReviewDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/review_validator~1ReviewRedeemer"
+        }
+      },
+      "compiledCode": "59060f01010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e3300130093754007370e90024dc3a40013008375400891111919912cc004c0140122b3001301037540170028b20228acc004c02401226464b300130150028024590131bae301300130103754017159800980300244c8c966002602a0050048b2026375c602600260206ea802e2b30013370e9003002456600260206ea802e005164045164038807100e201c19800980818071baa00691808980918091809000c8c044c048c048c048c048c048c048c048c04800644646600200200644b30010018a508acc004cdc79bae30140010038a51899801001180a800a020404d230113012301230123012301230123012001918089809000c8c044c048c048c048c048c048c0480064602260246024602460246024003300d375401323011301230120014888888888966002601a0051598009806980b9baa00b8992cc0056600266e252002375a600c60326ea8006266e24dd69803180c9baa0014802a29410174566002660106eb0c024c064dd50059bae300a30193754003159800acc004c038dd69802180c9baa0018acc004c038dd69802980c9baa0018cc004c048c060dd51803980c9baa001a50a51405d14a080ba294101744c96600260026e34dd71801980d1baa0028acc004c004dc69bae301c301a375400513001371a6eb8c02cc068dd5001452820308a5040606e2120008a50405d14a080ba2941017180d180c1baa00b8b202c8cc0048c06cc070c070c070c07000644b3001300f30193754005132323232323232329800992cc004c08c0062b30013371290021811000c5a260386044002810a2c8120dd51812000cdd718120044dd69812003cdd718120034dd71812002cdd698120024dd69812001cdd69812001244444444b3001302d009808c5902b0c090004c08c004c088004c084004c080004c07c004c078004c068dd5001459018488c8cc00400400c896600200314a11598009801980f000c528c4cc008008c07c00501a203a488966002602800b1598009808180d1baa00e8992cc004cc02cdd61806180e1baa00e375c603c60386ea805e2660046eb0c014c070dd50071192cc004c050c074dd5000c4c8cc01800456600266e1cdd69805180f9baa001337006eb4c028c07cdd50022400515980099b8f375c6042603e6ea8004dd71810980f9baa0048acc004cdc39bad300c301f37540026eb4c030c07cdd5002456600266e3cdd71804180f9baa001375c6010603e6ea80122b30013371e6eb8c040c07cdd50009bae3010301f375400915980099b87375a600e603e6ea8004dd69803980f9baa004899b87375a6016603e6ea8004dd69805980f9baa0048a50407514a080ea294101d4528203a8a50407514a080e8c080c078dd5000c52820383006301d375400314a080d0c074c06cdd50074590194566002602200b1598009808180d1baa00e8992cc004cc02cdd61806180e1baa00e375c603c60386ea805e2660046eb0c014c070dd50071192cc004c050c074dd5000c4c8cc01800456600266e1cdd69805980f9baa001337006eb4c02cc07cdd50022400515980099b8f375c6042603e6ea8004dd71810980f9baa0048acc004cdc39bad300c301f37540026eb4c030c07cdd5002456600266e3cdd71804180f9baa001375c6010603e6ea80122b30013371e6eb8c040c07cdd50009bae3010301f375400915980099b87375a600e603e6ea8004dd69803980f9baa004899b87375a6014603e6ea8004dd69805180f9baa0048a50407514a080ea294101d4528203a8a50407514a080e8c080c078dd5000c52820383006301d375400314a080d0c074c06cdd50074590194566002602060346ea803a264b3001337126eb4c078c070dd526010bd8799f05021a00989680ff00375a600e60386ea80062b3001337126eb4c020c070dd50009bad3009301c375498010bd8799f05021a00989680ff008acc004c054c06cdd51805180e1baa0018998059bac300c301c375401c6eb8c034c070dd5000c52820348a50406914a080d0c074c06cdd50074590192032406440583010005300f30100044590070c01c004c00cdd5003c52689b2b20021",
+      "hash": "495ddae980ab6b9ce5ad3fe58fb53e31e555e45814fc603b3f03ebad"
+    },
+    {
+      "title": "review_validator.review_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59060f01010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e3300130093754007370e90024dc3a40013008375400891111919912cc004c0140122b3001301037540170028b20228acc004c02401226464b300130150028024590131bae301300130103754017159800980300244c8c966002602a0050048b2026375c602600260206ea802e2b30013370e9003002456600260206ea802e005164045164038807100e201c19800980818071baa00691808980918091809000c8c044c048c048c048c048c048c048c048c04800644646600200200644b30010018a508acc004cdc79bae30140010038a51899801001180a800a020404d230113012301230123012301230123012001918089809000c8c044c048c048c048c048c048c0480064602260246024602460246024003300d375401323011301230120014888888888966002601a0051598009806980b9baa00b8992cc0056600266e252002375a600c60326ea8006266e24dd69803180c9baa0014802a29410174566002660106eb0c024c064dd50059bae300a30193754003159800acc004c038dd69802180c9baa0018acc004c038dd69802980c9baa0018cc004c048c060dd51803980c9baa001a50a51405d14a080ba294101744c96600260026e34dd71801980d1baa0028acc004c004dc69bae301c301a375400513001371a6eb8c02cc068dd5001452820308a5040606e2120008a50405d14a080ba2941017180d180c1baa00b8b202c8cc0048c06cc070c070c070c07000644b3001300f30193754005132323232323232329800992cc004c08c0062b30013371290021811000c5a260386044002810a2c8120dd51812000cdd718120044dd69812003cdd718120034dd71812002cdd698120024dd69812001cdd69812001244444444b3001302d009808c5902b0c090004c08c004c088004c084004c080004c07c004c078004c068dd5001459018488c8cc00400400c896600200314a11598009801980f000c528c4cc008008c07c00501a203a488966002602800b1598009808180d1baa00e8992cc004cc02cdd61806180e1baa00e375c603c60386ea805e2660046eb0c014c070dd50071192cc004c050c074dd5000c4c8cc01800456600266e1cdd69805180f9baa001337006eb4c028c07cdd50022400515980099b8f375c6042603e6ea8004dd71810980f9baa0048acc004cdc39bad300c301f37540026eb4c030c07cdd5002456600266e3cdd71804180f9baa001375c6010603e6ea80122b30013371e6eb8c040c07cdd50009bae3010301f375400915980099b87375a600e603e6ea8004dd69803980f9baa004899b87375a6016603e6ea8004dd69805980f9baa0048a50407514a080ea294101d4528203a8a50407514a080e8c080c078dd5000c52820383006301d375400314a080d0c074c06cdd50074590194566002602200b1598009808180d1baa00e8992cc004cc02cdd61806180e1baa00e375c603c60386ea805e2660046eb0c014c070dd50071192cc004c050c074dd5000c4c8cc01800456600266e1cdd69805980f9baa001337006eb4c02cc07cdd50022400515980099b8f375c6042603e6ea8004dd71810980f9baa0048acc004cdc39bad300c301f37540026eb4c030c07cdd5002456600266e3cdd71804180f9baa001375c6010603e6ea80122b30013371e6eb8c040c07cdd50009bae3010301f375400915980099b87375a600e603e6ea8004dd69803980f9baa004899b87375a6014603e6ea8004dd69805180f9baa0048a50407514a080ea294101d4528203a8a50407514a080e8c080c078dd5000c52820383006301d375400314a080d0c074c06cdd50074590194566002602060346ea803a264b3001337126eb4c078c070dd526010bd8799f05021a00989680ff00375a600e60386ea80062b3001337126eb4c020c070dd50009bad3009301c375498010bd8799f05021a00989680ff008acc004c054c06cdd51805180e1baa0018998059bac300c301c375401c6eb8c034c070dd5000c52820348a50406914a080d0c074c06cdd50074590192032406440583010005300f30100044590070c01c004c00cdd5003c52689b2b20021",
+      "hash": "495ddae980ab6b9ce5ad3fe58fb53e31e555e45814fc603b3f03ebad"
+    }
+  ],
+  "definitions": {
+    "Bool": {
+      "title": "Bool",
+      "anyOf": [
+        {
+          "title": "False",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "True",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "review_validator/ProductId": {
+      "title": "ProductId",
+      "dataType": "bytes"
+    },
+    "review_validator/Rating": {
+      "title": "Rating",
+      "dataType": "integer"
+    },
+    "review_validator/ReviewDatum": {
+      "title": "ReviewDatum",
+      "description": "Review datum stored on-chain",
+      "anyOf": [
+        {
+          "title": "ReviewDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "product_id",
+              "description": "Unique product identifier",
+              "$ref": "#/definitions/review_validator~1ProductId"
+            },
+            {
+              "title": "rating",
+              "description": "Rating (1-5)",
+              "$ref": "#/definitions/review_validator~1Rating"
+            },
+            {
+              "title": "review_hash",
+              "description": "Hash of the review content (stored off-chain or on IPFS)",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "reviewer",
+              "description": "Reviewer's wallet public key hash",
+              "$ref": "#/definitions/review_validator~1ReviewerPubKeyHash"
+            },
+            {
+              "title": "timestamp",
+              "description": "Timestamp of review submission (POSIX time)",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "upvotes",
+              "description": "Upvotes count",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "flags",
+              "description": "Flags count (for spam/inappropriate content)",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "verified",
+              "description": "Whether the review has been verified by community",
+              "$ref": "#/definitions/Bool"
+            }
+          ]
+        }
+      ]
+    },
+    "review_validator/ReviewRedeemer": {
+      "title": "ReviewRedeemer",
+      "description": "Actions that can be performed on reviews",
+      "anyOf": [
+        {
+          "title": "SubmitReview",
+          "description": "Submit a new review",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "UpvoteReview",
+          "description": "Upvote an existing review",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "voter",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        },
+        {
+          "title": "FlagReview",
+          "description": "Flag a review as spam/inappropriate",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": [
+            {
+              "title": "flagger",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        },
+        {
+          "title": "ClaimReward",
+          "description": "Claim reward for verified review",
+          "dataType": "constructor",
+          "index": 3,
+          "fields": []
+        }
+      ]
+    },
+    "review_validator/ReviewerPubKeyHash": {
+      "title": "ReviewerPubKeyHash",
+      "dataType": "bytes"
+    }
+  }
+}
